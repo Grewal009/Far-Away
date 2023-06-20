@@ -1,11 +1,18 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
+import Logo from "./components/Logo";
+import Form from "./components/Form";
+import ParckingList from "./components/PackingList";
+import Stats from "./components/Stats";
 
 const App = () => {
   return (
-    <div>
-      <h1 className="text-3xl font-bold text-green-500">Hello React!</h1>
-    </div>
+    <>
+      <Logo />
+      <Form />
+      <ParckingList />
+      <Stats />
+    </>
   );
 };
 
