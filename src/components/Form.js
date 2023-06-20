@@ -2,11 +2,12 @@ const Form = () => {
   return (
     <form className="bg-[#FFD79C] py-5">
       <h2 className="mb-2">What do you need for your trip?</h2>
-      <select className="mx-1 rounded-full px-5 py-1 text-lg font-semibold text-slate-700">
-        <option value={1}>1</option>
-        <option value={2}>2</option>
-        <option value={3}>3</option>
-        <option value={4}>4</option>
+      <select className="mx-1 h-[36px] rounded-full px-5 py-1 text-lg font-semibold text-slate-700">
+        {Array.from({ length: 20 }, (ele, i) => i + 1).map((num) => (
+          <option value={num} key={num}>
+            {num}
+          </option>
+        ))}
       </select>
       <input
         type="text"
