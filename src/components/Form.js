@@ -1,6 +1,10 @@
 const Form = () => {
+  function handleSubmit(e) {
+    e.preventDefault();
+    console.log(e);
+  }
   return (
-    <form className="bg-[#FFD79C] py-5">
+    <form className="bg-[#FFD79C] py-5" onSubmit={handleSubmit}>
       <h2 className="mb-2">What do you need for your trip?</h2>
       <select className="mx-1 h-[36px] rounded-full px-5 py-1 text-lg font-semibold text-slate-700">
         {Array.from({ length: 20 }, (ele, i) => i + 1).map((num) => (
