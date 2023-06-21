@@ -5,6 +5,7 @@ const Form = () => {
   const [quantity, setQuantity] = useState(1);
   function handleSubmit(e) {
     e.preventDefault();
+    if (!description) return;
     console.log(e);
     const newItem = {
       description,
@@ -16,6 +17,7 @@ const Form = () => {
     setDescription("");
     setQuantity(1);
   }
+
   return (
     <form className="bg-[#FFD79C] py-5" onSubmit={handleSubmit}>
       <h2 className="mb-2">What do you need for your trip?</h2>
