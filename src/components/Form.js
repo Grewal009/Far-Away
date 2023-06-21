@@ -6,6 +6,15 @@ const Form = () => {
   function handleSubmit(e) {
     e.preventDefault();
     console.log(e);
+    const newItem = {
+      description,
+      quantity,
+      id: Date.now(),
+      packed: false,
+    };
+    console.log(newItem);
+    setDescription("");
+    setQuantity(1);
   }
   return (
     <form className="bg-[#FFD79C] py-5" onSubmit={handleSubmit}>
