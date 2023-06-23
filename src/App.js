@@ -9,14 +9,20 @@ import { useState } from "react";
 const App = () => {
   const [items, setItems] = useState([]);
   function handleItems(it) {
+    //update array not by mutating
     setItems((items) => [...items, it]);
+  }
+
+  function handleDelete(id) {
+    console.log(id);
+    setItems((item) => item.filter((it) => it.id !== id));
   }
 
   return (
     <>
       <Logo />
       <Form addItems={handleItems} />
-      <ParckingList items={items} />
+      <ParckingList items={items} deleteItem={handleDelete} />
       <Stats />
     </>
   );
