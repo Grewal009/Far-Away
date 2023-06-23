@@ -1,12 +1,12 @@
 import { initialItems } from "../utils/constants";
 import Item from "./Item";
 
-const ParckingList = ({ items, deleteItem }) => {
+const ParckingList = ({ items, deleteItem, status }) => {
   return (
     <div className="h-52 overflow-scroll bg-[#A2CDB0] px-5 py-5">
       <ul className="flex flex-wrap items-center justify-center">
         {items.map((it) => (
-          <Item item={it} key={it.id} deleteItem={deleteItem} />
+          <Item item={it} key={it.id} deleteItem={deleteItem} status={status} />
         ))}
       </ul>
     </div>

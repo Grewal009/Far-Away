@@ -18,11 +18,21 @@ const App = () => {
     setItems((item) => item.filter((it) => it.id !== id));
   }
 
+  function handleStatus(id) {
+    setItems((items) =>
+      items.map((it) => (it.id === id ? { ...it, packed: !it.packed } : it))
+    );
+  }
+
   return (
     <>
       <Logo />
       <Form addItems={handleItems} />
-      <ParckingList items={items} deleteItem={handleDelete} />
+      <ParckingList
+        items={items}
+        deleteItem={handleDelete}
+        status={handleStatus}
+      />
       <Stats />
     </>
   );
