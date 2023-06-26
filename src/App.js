@@ -5,7 +5,6 @@ import Form from "./components/Form";
 import ParckingList from "./components/PackingList";
 import Stats from "./components/Stats";
 import { useState } from "react";
-import Sorts from "./components/Sorts";
 
 const App = () => {
   const [items, setItems] = useState([]);
@@ -34,7 +33,6 @@ const App = () => {
         deleteItem={handleDelete}
         status={handleStatus}
       />
-      <Sorts />
       <Stats items={items} />
     </>
   );
