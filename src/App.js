@@ -24,6 +24,10 @@ const App = () => {
     );
   }
 
+  function handleClear() {
+    setItems((items) => []);
+  }
+
   return (
     <>
       <Logo />
@@ -32,6 +36,7 @@ const App = () => {
         items={items}
         deleteItem={handleDelete}
         status={handleStatus}
+        clearList={handleClear}
       />
       <Stats items={items} />
     </>

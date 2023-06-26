@@ -2,7 +2,7 @@ import { useState } from "react";
 import { initialItems } from "../utils/constants";
 import Item from "./Item";
 
-const ParckingList = ({ items, deleteItem, status }) => {
+const ParckingList = ({ items, deleteItem, status, clearList }) => {
   const [sort, setSort] = useState("input");
   let sortedItems;
   if (sort === "input") {
@@ -43,8 +43,11 @@ const ParckingList = ({ items, deleteItem, status }) => {
           <option value="description">Sort by description</option>
           <option value="packed">Sort by packed status</option>
         </select>
-        <button className="ml-2 mt-2 w-auto rounded-full bg-amber-800 px-3 py-1 text-sm uppercase text-slate-300 hover:bg-amber-700">
-          Clear
+        <button
+          onClick={clearList}
+          className="ml-2 mt-2 w-auto rounded-full bg-amber-800 px-3 py-1 text-sm uppercase text-slate-300 hover:bg-amber-700"
+        >
+          Clear list
         </button>
       </div>
     </div>

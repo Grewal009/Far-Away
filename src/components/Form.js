@@ -42,7 +42,7 @@ const Form = ({ addItems }) => {
           placeholder="Item..."
           className="mx-1 rounded-full px-5 py-1 text-lg font-semibold text-slate-700"
         />
-        <button className="mx-1 mt-3 rounded-full bg-amber-800 px-5 py-1 text-lg font-semibold text-slate-300 hover:bg-amber-700">
+        <button className="mx-1 mt-3 rounded-full bg-amber-800 px-5 py-1 text-lg font-semibold uppercase text-slate-300 hover:bg-amber-700">
           Add
         </button>
       </div>
